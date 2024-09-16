@@ -1,0 +1,15 @@
+1) O que acontece se extrato de um cliente deve agora retornar no formato HTML, ao invés de String?
+A classe Cliente deveria ter apenas uma responsabilidade, para corrigir isso foi criada uma interface ExtractFormatter para que diferentes classes
+de formatação possam implementá-la. Dessa forma, será mais fácil implementar diferentesformatações. 
+
+2) O que ocorre se as regras de cálculo e preço mudarem?
+Foi criada uma interface price para que diferentes regras de calculo possam ser implementadas
+em classes diferentes.
+
+3) Se classificação das fitas mudar toda semana?
+Foi uma interface ClassificationProvider que fornece a classificação atual das fitas. Implementações diferentes podem ser usadas 
+para fornecer classificações dinâmicas.
+
+4) Se esquema de pontos de alugador puder mudar a qualquer hora?
+Foi criada uma interface PointsCalculator para que diferenes regras de calculo possam ser
+implementadas por classes diferentes.
